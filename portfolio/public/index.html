@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Tulio Duarte Game Developer</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $("a").on('click', function(event) {
+
+          if (this.hash !== "") {
+            event.preventDefault();
+
+            var hash = this.hash;
+
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+          
+              window.location.hash = hash;
+            });
+          }  
+        });
+      });
+    </script>
+  </head>
+  <body>    
+    <div class="main" id="root">
+      <div class="line-divisor" id="about-scroll">
+        <img alt="" src="./img/linedivisor.png">
+      </div>
+      <div class="navbar">
+        <a href="#about-scroll">Aboute me</a>
+        <a href="#games-scroll">Games</a>
+        <a href="#experience-scroll">Experience</a>
+        <a href="#contact-scroll">Contact</a>
+      </div>
+      <div id="about">
+        <h1>Tulio Duarte</h1>
+        <h2>Game Developer</h2>
+        <p id="cover-letter">I am a game developer and graphics programmer with 5+ years of experience. I have worked on PC/Mobile games, 3D tools, and AR applications along those years, from gameplay and UI to visual effects, shaders and optimizing rendering. I am passionate about games and I love what I do. Also, I have Game Design and Art skills, which are very helpful during the development of a project and I am always practicing in my personal projects. If you need an all-rounded, experienced, and creative game developer, here I am!</p>
+      </div>
+      <div class="line-divisor" id="games-scroll">
+        <img alt="" src="./img/linedivisor.png">
+      </div>
+      <div class="games" id="games">
+        <h1>Games</h1>
+        <div class="thin-line-divisor" id="contact-scroll">
+          <img alt="" src="./img/thinLineDivisor.png">
+        </div>
+        <div class="game">
+          <div class="game-title" id="Arida">
+            <h2>Arida: Backland's Awakening</h2>
+            <div id="carousel-container1"></div>
+            <p class="game-description">The first game of Aoca Game Lab studio.</p>
+            <ul class="duties-list">
+              <li>Gameplay</li>
+              <li>AI</li>
+              <li>Graphics</li>
+              <li>A lot of things, really!</li>
+            </ul>
+          </div>
+        </div>     
+        <div class="thin-line-divisor" id="contact-scroll">
+          <img alt="" src="./img/thinLineDivisor.png">
+        </div>   
+      </div>
+      <div class="line-divisor" id="experience-scroll">
+        <img alt="" src="./img/linedivisor.png">
+      </div>
+      <div id="experience">
+        <h1>Professional Experience</h1>
+        <p>Aoca Game Lab</p>
+        <p>Sinergia Games</p>
+      </div>
+      <div class="line-divisor" id="contact-scroll">
+        <img alt="" src="./img/linedivisor.png">
+      </div>
+      <div id="contact">
+        <h1>Contact</h1>
+        <div id="platforms">
+          <div class="platform" id="email">
+            <img alt="" src="./img/gmail.png" width="100" height="100">
+            <p>Email: duartulio@gmail.com</p>
+          </div>
+          <div class="platform" id="linkedin">
+            <img alt="" src="./img/linkedin.png" width="100" height="100">
+            <p>Linkedin: duartulio@gmail.com</p>
+          </div>
+          <div class="platform" id="github">
+            <img alt="" src="./img/github.png" width="100" height="100">
+            <p>Github: duartulio@gmail.com</p>
+          </div>
+          <div class="platform" id="Instagram">
+            <img alt="" src="./img/instagram.png" width="100" height="100">
+            <p>Instagram: duartulio@gmail.com</p>
+          </div>
+        </div>    
+      </div>
+      <div class="line-divisor" id="end-scroll">
+        <img alt="" src="./img/linedivisor.png">
+      </div>
+    </div>    
+  </body>
+</html>

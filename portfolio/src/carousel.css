@@ -1,0 +1,17 @@
+.carousel{
+    display: flex;
+    width: 2048;
+    height: 1024;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-slide img{
+    width: 100%;
+    height: auto;
+}
+
+.slide-arrow{
+    width: 64px;
+    height: auto;
+}
