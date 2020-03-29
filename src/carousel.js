@@ -31,6 +31,10 @@ class Carousel extends React.Component {
         var totalTime = this.state.timer + value;
         if(totalTime >= 3){
             this.nextSlide();
+        }else{
+            this.setState({
+                timer: totalTime
+              });
         }
     }
 
