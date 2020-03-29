@@ -7,9 +7,23 @@ import Carousel from './carousel';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Carousel frameUrl={"./img/frame.png"} imgUrls={['./img/carrot1.png', './img/img2.png', './img/img3.png']} rightArrowUrl={"./img/rightArrow.png"} leftArrowUrl={"./img/leftArrow.png"}/>
+    <Carousel frameUrl={"./img/frame.png"} imgUrls={['./img/arida1.png', './img/arida2.png', './img/arida3.png', './img/arida4.png', './img/arida5.png']} rightArrowUrl={"./img/rightArrow.png"} leftArrowUrl={"./img/leftArrow.png"}/>
   </React.StrictMode>,
-  document.getElementById('carousel-container1')
+  document.getElementById('arida')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Carousel frameUrl={"./img/frame.png"} imgUrls={['./img/blankKnight1.png', './img/blankKnight2.png', './img/blankKnight3.png', './img/blankKnight4.png']} rightArrowUrl={"./img/rightArrow.png"} leftArrowUrl={"./img/leftArrow.png"}/>
+  </React.StrictMode>,
+  document.getElementById('blank-knight')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Carousel frameUrl={"./img/frame.png"} imgUrls={['./img/carrot1.png', './img/carrot2.png', './img/carrot3.png', './img/carrot4.png']} rightArrowUrl={"./img/rightArrow.png"} leftArrowUrl={"./img/leftArrow.png"}/>
+  </React.StrictMode>,
+  document.getElementById('carrot')
 );
 
 // If you want your app to work offline and load faster, you can change
