@@ -7,21 +7,28 @@ import Carousel from './carousel';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Carousel frameUrl={"./img/frame.png"} imgUrls={['./img/arida1.png', './img/arida2.png', './img/arida3.png', './img/arida4.png', './img/arida5.png']} rightArrowUrl={"./img/rightArrow.png"} leftArrowUrl={"./img/leftArrow.png"}/>
+    <Carousel imgUrls={['./img/arida1.png', './img/arida2.png', './img/arida3.png', './img/arida4.png', './img/arida5.png']} rightArrowUrl={"./img/rightArrow.png"} leftArrowUrl={"./img/leftArrow.png"}/>
   </React.StrictMode>,
   document.getElementById('arida')
 );
 
 ReactDOM.render(
   <React.StrictMode>
-    <Carousel frameUrl={"./img/frame.png"} imgUrls={['./img/blankknight1.png', './img/blankknight2.png', './img/blankknight3.png', './img/blankknight4.png']} rightArrowUrl={"./img/rightArrow.png"} leftArrowUrl={"./img/leftArrow.png"}/>
+    <Carousel imgUrls={['./img/sinergia1.png', './img/sinergia2.png', './img/sinergia3.png', './img/sinergia4.png']} rightArrowUrl={"./img/rightArrow.png"} leftArrowUrl={"./img/leftArrow.png"}/>
+  </React.StrictMode>,
+  document.getElementById('games-sinergia')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Carousel imgUrls={['./img/blankknight1.png', './img/blankknight2.png', './img/blankknight3.png', './img/blankknight4.png']} rightArrowUrl={"./img/rightArrow.png"} leftArrowUrl={"./img/leftArrow.png"}/>
   </React.StrictMode>,
   document.getElementById('blank-knight')
 );
 
 ReactDOM.render(
   <React.StrictMode>
-    <Carousel frameUrl={"./img/frame.png"} imgUrls={['./img/carrot1.png', './img/carrot2.png', './img/carrot3.png', './img/carrot4.png']} rightArrowUrl={"./img/rightArrow.png"} leftArrowUrl={"./img/leftArrow.png"}/>
+    <Carousel imgUrls={['./img/carrot1.png', './img/carrot2.png', './img/carrot3.png', './img/carrot4.png']} rightArrowUrl={"./img/rightArrow.png"} leftArrowUrl={"./img/leftArrow.png"}/>
   </React.StrictMode>,
   document.getElementById('carrot')
 );

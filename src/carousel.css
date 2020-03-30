@@ -14,4 +14,5 @@
 .slide-arrow{
     width: 64px;
     height: auto;
+    cursor:pointer; 
 }
