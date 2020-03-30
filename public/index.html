@@ -274,7 +274,7 @@
       <div style="padding-top: 32px; text-align: center;">
         <a id="hidden-lore" style="color: lightgray; text-decoration: none;" href="#contact-scroll">Click here for more lore!</a>
       </div>
-      <div style="display: none; text-align: center; align-items: center; vertical-align: middle; padding: 0% 5%;" id="lore-scroll">
+      <div style="display: none; text-align: center; align-items: center; vertical-align: middle; padding: 0% 10%;" id="lore-scroll">
         <h2>Hidden Lore</h2>
         <p>
           In my childhood, I was fascinated by RPG and was always creating campaigns and characters. 
@@ -318,6 +318,7 @@
     <script>
       document.getElementById("hidden-lore").onclick = () =>{
         document.getElementById("lore-scroll").style.display = "block";
+        document.getElementById("hidden-lore").style.display = "none";
       };
     </script>    
   </body>
