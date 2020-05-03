@@ -7,6 +7,13 @@ import Carousel from './carousel';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Carousel imgUrls={['./video/pathlinesvideo.mp4', './img/pathlines1.png', './img/pathlines2.png', './img/pathlines3.png']} rightArrowUrl={"./img/rightArrow.png"} leftArrowUrl={"./img/leftArrow.png"}/>
+  </React.StrictMode>,
+  document.getElementById('pathlines')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
     <Carousel imgUrls={['./img/arida1.png', './img/arida2.png', './img/arida3.png', './img/arida4.png', './img/arida5.png']} rightArrowUrl={"./img/rightArrow.png"} leftArrowUrl={"./img/leftArrow.png"}/>
   </React.StrictMode>,
   document.getElementById('arida')
