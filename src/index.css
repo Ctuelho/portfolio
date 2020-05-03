@@ -171,3 +171,17 @@ li{
   text-decoration:none; 
   cursor:pointer; 
 }
+
+.player-wrapper {
+  position: relative;
+  /* padding-top: 56.25%; Player ratio: 100 / (1280 / 720) */
+  align-items: center;
+  width: 1280;
+  height: 720;
+  padding: 32;
+}
+ 
+.react-player {
+  position: relative;
+  margin: auto;
+}

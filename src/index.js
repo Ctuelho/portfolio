@@ -8,8 +8,7 @@ import ReactPlayer from 'react-player'
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Carousel imgUrls={['./video/pathlinesvideo.mp4', './img/pathlines1.jpg', './img/pathlines2.jpg', './img/pathlines3.jpg']} rightArrowUrl={"./img/rightArrow.png"} leftArrowUrl={"./img/leftArrow.png"}/> */}
-    <ReactPlayer url='https://www.youtube.com/watch?v=cIEsTXt4zh0' playing/>
+    <ReactPlayer className='react-player' url='https://www.youtube.com/watch?v=cIEsTXt4zh0' playing loop/>
   </React.StrictMode>,
   document.getElementById('pathlines')
 );
