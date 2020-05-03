@@ -4,10 +4,12 @@ import './index.css';
 //import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Carousel from './carousel';
+import ReactPlayer from 'react-player'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Carousel imgUrls={['./video/pathlinesvideo.mp4', './img/pathlines1.png', './img/pathlines2.png', './img/pathlines3.png']} rightArrowUrl={"./img/rightArrow.png"} leftArrowUrl={"./img/leftArrow.png"}/>
+    {/* <Carousel imgUrls={['./video/pathlinesvideo.mp4', './img/pathlines1.jpg', './img/pathlines2.jpg', './img/pathlines3.jpg']} rightArrowUrl={"./img/rightArrow.png"} leftArrowUrl={"./img/leftArrow.png"}/> */}
+    <ReactPlayer url='https://www.youtube.com/watch?v=cIEsTXt4zh0' playing/>
   </React.StrictMode>,
   document.getElementById('pathlines')
 );
