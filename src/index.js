@@ -8,9 +8,16 @@ import ReactPlayer from 'react-player'
 
 ReactDOM.render(
   <React.StrictMode>
-    <ReactPlayer className='react-player' url='https://www.youtube.com/watch?v=cIEsTXt4zh0' playing loop/>
+    <ReactPlayer className='react-player' url='https://www.youtube.com/watch?v=Ues8-dUYecI'/>
   </React.StrictMode>,
   document.getElementById('pathlines')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <ReactPlayer className='react-player' url='https://youtu.be/ltGq1BUhrq4' playing loop/>
+  </React.StrictMode>,
+  document.getElementById('hungerfordungeon')
 );
 
 ReactDOM.render(
