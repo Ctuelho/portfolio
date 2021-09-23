@@ -36,7 +36,7 @@ ReactDOM.render(
 
 ReactDOM.render(
   <React.StrictMode>
-    <Carousel imgUrls={['./img/blankknight1.png', './img/blankknight2.png', './img/blankknight3.png', './img/blankknight4.png']} rightArrowUrl={"./img/rightArrow.png"} leftArrowUrl={"./img/leftArrow.png"}/>
+    <Carousel imgUrls={['./img/bk1.png', './img/bk2.png', './img/bk3.png', './img/bk4.png']} rightArrowUrl={"./img/rightArrow.png"} leftArrowUrl={"./img/leftArrow.png"}/>
   </React.StrictMode>,
   document.getElementById('blank-knight')
 );
