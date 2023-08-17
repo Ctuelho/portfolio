@@ -15,6 +15,20 @@ ReactDOM.render(
 
 ReactDOM.render(
   <React.StrictMode>
+    <ReactPlayer className='react-player' url='https://youtu.be/M7zJXKHKDDg'/>
+  </React.StrictMode>,
+  document.getElementById('akumi-wars')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <ReactPlayer className='react-player' url='https://youtu.be/53DPw9dYZhc'/>
+  </React.StrictMode>,
+  document.getElementById('gomma')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
     <ReactPlayer className='react-player' url='https://youtu.be/ltGq1BUhrq4' playing loop/>
   </React.StrictMode>,
   document.getElementById('hungerfordungeon')

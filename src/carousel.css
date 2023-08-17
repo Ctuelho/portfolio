@@ -4,6 +4,7 @@
     height: 1024;
     align-items: center;
     justify-content: center;
+    z-index: inherit;
 }
 
 .image-slide img{
