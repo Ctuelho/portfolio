@@ -6,18 +6,32 @@ import * as serviceWorker from './serviceWorker';
 import Carousel from './carousel';
 import ReactPlayer from 'react-player'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <ReactPlayer className='react-player' url='https://www.youtube.com/watch?v=Ues8-dUYecI'/>
-  </React.StrictMode>,
-  document.getElementById('pathlines')
-);
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <ReactPlayer className='react-player' url='https://www.youtube.com/watch?v=Ues8-dUYecI'/>
+//   </React.StrictMode>,
+//   document.getElementById('pathlines')
+// );
 
 ReactDOM.render(
   <React.StrictMode>
     <ReactPlayer className='react-player' url='https://youtu.be/M7zJXKHKDDg'/>
   </React.StrictMode>,
   document.getElementById('akumi-wars')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <ReactPlayer className='react-player' url='https://youtu.be/_47nkjGdIoQ'/>
+  </React.StrictMode>,
+  document.getElementById('psi')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <ReactPlayer className='react-player' url='https://www.youtube.com/watch?v=OrJVpwAh1VI'/>
+  </React.StrictMode>,
+  document.getElementById('deepnagogia')
 );
 
 ReactDOM.render(
