@@ -22,6 +22,13 @@ ReactDOM.render(
 
 ReactDOM.render(
   <React.StrictMode>
+    <ReactPlayer className='react-player' url='https://youtu.be/7jCUEVq-tjc'/>
+  </React.StrictMode>,
+  document.getElementById('hidden-in-light')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
     <ReactPlayer className='react-player' url='https://youtu.be/_47nkjGdIoQ'/>
   </React.StrictMode>,
   document.getElementById('psi')
