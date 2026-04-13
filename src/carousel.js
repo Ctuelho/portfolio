@@ -2,102 +2,84 @@ import React from 'react';
 import './carousel.css';
 
 class Carousel extends React.Component {
-    
     constructor (props) {
         super(props);
-    
         this.state = {
           currentImageIndex: 0,
-          frameUrl: props.frameUrl,
-          imgUrls: props.imgUrls,
-          leftArrowUrl: props.leftArrowUrl,
-          rightArrowUrl: props.rightArrowUrl,
           timer: 0
         };
-
         this.nextSlide = this.nextSlide.bind(this);
         this.previousSlide = this.previousSlide.bind(this);
     }
 
     componentDidMount() {
-        this.interval = setInterval(() => this.incrementTimer(1), 1000);
-      }
+        this.interval = setInterval(() => this.incrementTimer(), 1000);
+    }
 
     componentWillUnmount() {
         clearInterval(this.interval);
     }
 
-    incrementTimer(value){
-        var totalTime = this.state.timer + value;
-        if(totalTime >= 3){
+    incrementTimer() {
+        const { imgUrls } = this.props;
+        if (!imgUrls || imgUrls.length === 0) return; // Segurança contra crash
+
+        if (this.state.timer >= 3) {
             this.nextSlide();
-        }else{
-            this.setState({
-                timer: totalTime
-              });
+        } else {
+            this.setState({ timer: this.state.timer + 1 });
         }
     }
 
-    previousSlide () {
-        const lastIndex = this.state.imgUrls.length - 1;
-        const { currentImageIndex } = this.state;
-        const shouldResetIndex = currentImageIndex === 0;
-        const index =  shouldResetIndex ? lastIndex : currentImageIndex - 1;
-    
-        this.setState({
-          currentImageIndex: index,
-          timer: 0
-        });
+    previousSlide() {
+        const { imgUrls } = this.props;
+        if (!imgUrls) return;
+        const index = this.state.currentImageIndex === 0 ? imgUrls.length - 1 : this.state.currentImageIndex - 1;
+        this.setState({ currentImageIndex: index, timer: 0 });
     }
     
-     nextSlide () {
-        const lastIndex = this.state.imgUrls.length - 1;
-        const { currentImageIndex } = this.state;
-        const shouldResetIndex = currentImageIndex === lastIndex;
-        const index =  shouldResetIndex ? 0 : currentImageIndex + 1;
-    
-        this.setState({
-          currentImageIndex: index,
-          timer: 0
-        });
+    nextSlide() {
+        const { imgUrls } = this.props;
+        if (!imgUrls) return;
+        const index = this.state.currentImageIndex === imgUrls.length - 1 ? 0 : this.state.currentImageIndex + 1;
+        this.setState({ currentImageIndex: index, timer: 0 });
     }
 
-    render () {
+    render() {
+        const { imgUrls, leftArrowUrl, rightArrowUrl } = this.props;
+
+        // Se as imagens não chegaram, não renderiza nada (evita o erro)
+        if (!imgUrls || imgUrls.length === 0) return null;
+
         return (
             <div className="carousel">
-
-                <Arrow
-                    clickFunction={ this.previousSlide }
-                    url={this.state.leftArrowUrl}
-                />
-
-                <ImageSlide url={this.state.imgUrls[this.state.currentImageIndex]} frameUrl={this.state.frameUrl} />
-
-                <Arrow
-                    clickFunction={ this.nextSlide }
-                    url={this.state.rightArrowUrl}
-                />
-
+                <Arrow clickFunction={this.previousSlide} url={leftArrowUrl} />
+                <ImageSlide url={imgUrls[this.state.currentImageIndex]} />
+                <Arrow clickFunction={this.nextSlide} url={rightArrowUrl} />
             </div>
         );
     }
 }
 
 const ImageSlide = ({ url }) => {
+    // Se a URL começar com http, é externa. Se não, injeta o prefixo da public
+    const path = url.startsWith('http') ? url : process.env.PUBLIC_URL + url;
+    
     return (
         <div className="image-slide">
-            <img src={url} alt =""/>
+            <img src={path} alt="" />
         </div>
     );
 }
 
-const Arrow = ({ clickFunction, url }) => (
-    <div
-        className={"slide-arrow"}
-        onClick={ clickFunction }
-    >
-        <img src={url} alt =""/>
-    </div>
-); 
+const Arrow = ({ clickFunction, url }) => {
+    const path = url.startsWith('http') ? url : process.env.PUBLIC_URL + url;
+    
+    return (
+        <div className="slide-arrow" onClick={clickFunction}>
+            <img src={path} alt="" />
+        </div>
+    );
+};
 
 export default Carousel;

@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>Tulio Duarte - Game Designer/Gameplay Programmer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tulio Duarte - Technical Game Designer | Gameplay Programmer</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,42 +37,94 @@
       </div>      
       <div class="navbar">
         <a href="#about-scroll">About</a>
+        <a href="#skills-scroll">Skills</a>
         <a href="#games-scroll">Games</a>
         <a href="#education-scroll">Education</a>
         <a href="#experience-scroll">Experience</a>
         <a href="https://drive.google.com/file/d/1yCHtjjJtLrQt1bvD338ucrwbEqAuGuDZ/view?usp=sharing" target="_blank">CV</a>
         <a href="#contact-scroll">Contact</a>
       </div>
-      <div id="about">
+      <div id="about" class="patterndiv">
         <h1>Tulio Duarte</h1>
-        <h2>Game Designer and Gameplay Programmer</h2>
-        <div id="cover-letter">
+        <h2>Technical Game Designer | Gameplay Programmer</h2>
+        <div id="about-scroll" class="patterndiv">
           <p>
-            I’m a Game Designer and Gameplay Programmer with nearly 10 years of professional experience, with a strong focus on systems design and core gameplay mechanics.          </p>
+            I am a Technical Game Designer and Gameplay Programmer with ~10 years of experience in Unity, specializing in gameplay systems, content integration, and production-ready workflows.</p>
           <p>
-            I hold a Bachelor’s degree in Science and Technology from UFBA, where I developed a solid programming background while also studying Design and Arts through scholarships focused on digital art and educational games.          </p>
-          <p>
-            I’m passionate about designing deep, cohesive gameplay systems — from core mechanics and progression to balancing and player-driven interactions. If you’re looking for an experienced and versatile game designer who can connect design intent with implementation, I’d be glad to collaborate.          </p>
+            I bridge design, engineering, and art by implementing gameplay features directly in-engine and integrating assets such as animations, UI, VFX, prefabs, and data-driven systems into functional gameplay experiences.</p>
+        </div>
+      </div>
+      <div class="line-divisor" id="skills-scroll">            
+        <img alt="" src="./img/linedivisor.png">
+      </div>
+      <div id="skills" class="patterndiv">
+        <h1>Technical Skills</h1>
+        <div class="thin-line-divisor">
+          <img alt="" src="./img/thinLineDivisor.png">
+        </div>   
+        <div id="unity-skills"class="patterndiv">
+          <h2>Unity Production & Content Integration</h2>
+          <ul>
+           <li>Prefabs, scene setup, and gameplay composition</li>
+           <li>Animator Controllers and animation state machines</li>
+           <li>Integration of 3D/2D assets, VFX, and animations into gameplay systems</li>
+           <li>UI integration (UGUI) and in-engine gameplay wiring</li>
+           <li>Integration of 3D/2D assets, VFX, and animations into gameplay systems</li>
+          </ul>
+        </div>
+        <div class="thin-line-divisor">
+          <img alt="" src="./img/thinLineDivisor.png">
+        </div>   
+        <div id="data-systems" class="patterndiv">
+          <h2>Data-Driven Systems (Scriptable Objects)</h2>
+          <ul>
+           <li>Design and implementation of Scriptable Object-based architectures</li>
+           <li>Data-driven gameplay systems for skills, items, and character abilities</li>
+           <li>Decoupling of game design data from code for faster iteration</li>
+           <li>Support for scalable content pipelines and Live Ops-style updates</li>
+          </ul>
+        </div>
+        <div class="thin-line-divisor">
+          <img alt="" src="./img/thinLineDivisor.png">
+        </div>   
+        <div id="gameplay-programming" class="patterndiv">
+          <h2>Gameplay Programming</h2>
+          <ul>
+           <li>Core gameplay systems and mechanics implementation</li>
+           <li>Combat systems, AI behaviors, and progression logic</li>
+           <li>Modular and reusable system architecture</li>
+           <li>Balance-friendly systems designed for iteration and tuning</li>
+          </ul>
+        </div>
+        <div class="thin-line-divisor">
+          <img alt="" src="./img/thinLineDivisor.png">
+        </div>   
+        <div id="tool-workflow" class="patterndiv">
+          <h2>Tools & Workflow</h2>
+          <ul>
+           <li>Git version control in collaborative team environments</li>
+           <li>Rapid prototyping and iterative development in Unity</li>
+           <li>Cross-team collaboration between design, art, and engineering</li>
+           <li>Agile/iterative development with frequent gameplay testing and feature refinement in Unity</li>
+          </ul>
         </div>
       </div>
       <div class="line-divisor" id="games-scroll">            
         <img alt="" src="./img/linedivisor.png">
       </div>
-      <div class="games" id="games">
+      <div class="patterndiv" id="games">
         <h1>Games</h1>
-        <!-- <div class="thin-line-divisor">
-          <img alt="" src="./img/thinLineDivisor.png">
-        </div> -->      
         <div class="thin-line-divisor">
           <img alt="" src="./img/thinLineDivisor.png">
         </div>    
-        <div class="game">
-          <div class="game-title">
+        <div class="patterndiv">
+          <div class="patterndiv">
             <h2>Akumi Wars</h2>
             <div id="akumi-wars"></div>
-            <p class="game-description">
-              A turn-based RPG for PC featuring dozens of unique characters with a complex combat system with many different effects and combinations of strategies.</p>
-            <ul class="duties-list">
+            <p>
+              A turn-based RPG for PC featuring dozens of unique characters with a complex combat system with many different effects and combinations of strategies.
+            </p>
+            <ul>
               <li>Lead programmer and systems designer.</li>
               <li>Generalist programmer: gameplay, UI/UX, AI, Steam, etc.</li>
               <li>Designed game systems like: skills, combat, equipment, craft, stats, etc.</li>
@@ -88,11 +140,11 @@
         <div class="game">
           <div class="game-title">
             <h2>Arida: Backland's Awakening</h2>
-            <div id="arida"></div>
+            <div id="arida-carousel-container"></div>
             <p class="game-description">
               The first game of <a href="https://www.instagram.com/aocagamelab/" target="_blank" style="color: lightgray;">Aoca Game Lab</a> and my first game on Steam.
               A adventure/survival game with a political background about the lives of northeastern Brazilians during a civil war in the past in the dry and arid backlands of Brazil.</p>
-            <ul class="duties-list">
+            <ul>
               <li>Generalist game developer and gameplay programmer.</li>
               <li>Helped design the technical aspects of the game mechanics: survival, crafting, quests system, etc.</li>
               <li>Helped design the technical aspects of narrative elements like cutscenes, scenic views, etc.</li>

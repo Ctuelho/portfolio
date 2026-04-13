@@ -1,19 +1,24 @@
-.carousel{
+.carousel {
     display: flex;
-    width: 2048;
-    height: 1024;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    min-height: 200px; /* Garante que o espaço exista */
     align-items: center;
     justify-content: center;
-    z-index: inherit;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
 }
 
-.image-slide img{
+.image-slide img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
-.slide-arrow{
+.slide-arrow {
     width: 64px;
-    height: auto;
-    cursor:pointer; 
+    cursor: pointer;
+    flex-shrink: 0;
 }

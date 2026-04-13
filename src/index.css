@@ -49,6 +49,10 @@ body{
   color: lightgray;
 }
 
+h1, h2 {
+  text-align: center;
+}
+
 h1 {
   font-size: 70px;
 }
@@ -57,59 +61,69 @@ h2 {
   font-size: 40px;
 }
 
-#about{
+.patterndiv {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  text-align: justify;
+
+  line-height: 1.7;
+}
+
+/* #about{
   padding: 0% 16px;
   align-items: center;
   vertical-align: middle;
   text-align: center;
-}
+} */
 
-#cover-letter{
+/* #cover-letter{
   font-size: 28px;
   max-width: 1400px;
   margin: 0 auto;
   padding: 24px 5%;
   text-align: center;
-}
+} */
 
-.games{
+/* .games{
   padding: 0% 32px;
   text-align: center;
-}
+} */
 
-.game{
+/* .game{
   padding: 0% 0%;
-}
+} */
 
-.game-description{
+/* .game-description{
   font-size: 28px;
   max-width: 1400px;
   text-align: center;
   margin: 24px auto;
-}
+} */
 
-.duties-list{
+/* .duties-list{
   display: inline-block;
   text-align: left;
   list-style-position: inside;
-}
+} */
 
-li{
+/* li{
   padding-right: 24px;
   font-size: 24px;
-}
+} */
 
-#education{
+/* #education{
   margin: 0 auto;
   padding: 0 10%;
   text-align: center;
-}
+} */
 
-#experience{
+/* #experience{
   margin: 0 auto;
   padding: 0 10%;
   text-align: center;
-}
+} */
 
 #contact{
   margin: 0 auto;
@@ -179,6 +193,7 @@ li{
 .play-link{
   font-size: 28px;
   padding: 24px;
+  text-align: justify;
 }
 
 .play-link a{
