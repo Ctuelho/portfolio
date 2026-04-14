@@ -190,16 +190,23 @@ h2 {
   height: auto;
 }
 
-.play-link{
+.play-link {
   font-size: 28px;
   padding: 24px;
-  text-align: justify;
+  display: flex;          /* Transforma o container em flexbox */
+  justify-content: center; /* Centraliza o link horizontalmente */
+  text-align: center;
 }
 
-.play-link a{
-  color: lightgray; 
-  text-decoration:none; 
-  cursor:pointer; 
+/* Seleciona o link em todos os seus estados */
+.play-link a, 
+.play-link a:visited, 
+.play-link a:hover, 
+.play-link a:active {
+  color: lightgray !important;     /* Força a cor cinza */
+  text-decoration: none !important; /* Força a retirada do sublinhado */
+  cursor: pointer;
+  display: inline-block;
 }
 
 .player-wrapper {
