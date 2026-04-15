@@ -10,215 +10,248 @@ body {
   left: 0;
   right: 0;
   width: 100%;
-  max-height: 200px;
   display: flex;
-  /* display: table;
-  table-layout: fixed; */
-  /* display: inline-block; */
   align-items: center;
   justify-content: center;
   z-index: 1000000;
+  flex-wrap: wrap; /* Permite 2 linhas se necessário */
 }
 
 .navbar a {
   font-size: 28px;
-  /* float: left; */
-  /* display: block; */
-  /* display: inline-block; */
-  color:lightgray;
+  color: lightgray;
   text-align: center;
   padding: 16px 28px;
   text-decoration: none;
-  /*display: flex;*/
   flex: 1;
-  /* display: table-cell; */
 }
 
-/* .navbar a:hover {
-  background: darkgray;
-  color: black;
-} */
-
-body{
+body {
   background-color: black;
   font-family: "Lucida Console", Courier, monospace;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
 }
 
 .main {
-  margin-top: 60px;
+  margin-top: 80px;
   color: lightgray;
 }
 
 h1, h2 {
   text-align: center;
+  word-break: keep-all; 
+  overflow-wrap: break-word; 
+  hyphens: none;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-h1 {
-  font-size: 70px;
-}
-
-h2 {
-  font-size: 40px;
-}
+h1 { font-size: clamp(32px, 10vw, 70px); line-height: 1.1; }
+h2 { font-size: clamp(24px, 7vw, 40px); line-height: 1.2; }
 
 .patterndiv {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
-
   text-align: justify;
-
   line-height: 1.7;
 }
 
-/* #about{
-  padding: 0% 16px;
-  align-items: center;
-  vertical-align: middle;
-  text-align: center;
-} */
-
-/* #cover-letter{
-  font-size: 28px;
-  max-width: 1400px;
+.patterndiv .line-divisor {
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 24px 5%;
-  text-align: center;
-} */
-
-/* .games{
-  padding: 0% 32px;
-  text-align: center;
-} */
-
-/* .game{
-  padding: 0% 0%;
-} */
-
-/* .game-description{
-  font-size: 28px;
-  max-width: 1400px;
-  text-align: center;
-  margin: 24px auto;
-} */
-
-/* .duties-list{
-  display: inline-block;
-  text-align: left;
-  list-style-position: inside;
-} */
-
-/* li{
-  padding-right: 24px;
-  font-size: 24px;
-} */
-
-/* #education{
-  margin: 0 auto;
-  padding: 0 10%;
-  text-align: center;
-} */
-
-/* #experience{
-  margin: 0 auto;
-  padding: 0 10%;
-  text-align: center;
-} */
-
-#contact{
-  margin: 0 auto;
-  padding: 0 10%;
-  text-align: center;
+  position: relative;
+  left: 0 !important; /* Anula qualquer deslocamento de 50% que tenha vazado */
 }
 
-#platforms{
+.patterndiv .line-divisor img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- REDES SOCIAIS (PC) --- */
+#platforms {
   display: flex;
+  justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.platform {
+  padding: 0;
+  display: flex;
   justify-content: center;
 }
 
-.platform{
-  padding: 12px 24px;
-}
-
-.platform img{
-  height: auto;
-}
-
-.platform a{
-  font-size: 30px;
-  /* float: left; */
-  /* display: block; */
-  display: inline-block;
-  color:lightgray;
-  text-align: center;
-  padding: 16px 32px;
+.platform a {
+  padding: 0;
+  display: block;
+  line-height: 0;
   text-decoration: none;
 }
 
-.line-divisor{
+.platform img {
+  width: 80px;
+  height: 80px;
+}
+
+/* --- VÍDEOS E CARROSSÉIS (PC - CENTRALIZADOS) --- */
+.player-wrapper, 
+#arida-carousel-container, 
+#games-sinergia, 
+#blank-knight, 
+#carrot {
+  position: relative;
   width: 100%;
-  padding-top: 64px;
+  max-width: 1280px;
+  aspect-ratio: 16 / 9;
+  margin: 24px auto; /* Centraliza no PC */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Garante que não haja deslocamento lateral no PC */
+  left: 0 !important;
+  transform: none !important;
 }
 
-.line-divisor img{
-  width: 100%;
-  height: auto;
+.react-player {
+  width: 100% !important;
+  height: 100% !important;
 }
 
-.thin-line-divisor{
-  width: 100%;
-  height: auto;
-  padding: 32px 0px;
-}
-
-#end-scroll{
-  padding-bottom: 12px;
-}
-
-.email-section{
-  font-size: 28px;
-}
-
-.email-section a{
-  color: lightgray; 
-  text-decoration:none; 
-  cursor:pointer;  
-}
-
-.email-section img{
-  height: auto;
-}
-
+/* --- PLAY-LINK (STEAM / ITCH) --- */
 .play-link {
   font-size: 28px;
   padding: 24px;
-  display: flex;          /* Transforma o container em flexbox */
-  justify-content: center; /* Centraliza o link horizontalmente */
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
 
-/* Seleciona o link em todos os seus estados */
-.play-link a, 
-.play-link a:visited, 
-.play-link a:hover, 
-.play-link a:active {
-  color: lightgray !important;     /* Força a cor cinza */
-  text-decoration: none !important; /* Força a retirada do sublinhado */
-  cursor: pointer;
+.play-link a {
+  color: lightgray !important;
+  text-decoration: none !important;
   display: inline-block;
 }
 
-.player-wrapper {
-  position: relative;
-  /* padding-top: 56.25%; Player ratio: 100 / (1280 / 720) */
-  align-items: center;
-  width: 1280;
-  height: 720;
-  padding: 32;
+.play-link img {
+  display: block;
+  height: 114px !important;
+  width: auto !important;
 }
- 
-.react-player {
-  position: relative;
-  margin: auto;
+
+.play-link img[src*="itchlink"] {
+  height: 90px !important;
+}
+
+/* --- DIVISORES --- */
+.line-divisor { width: 100%; padding-top: 64px; }
+.line-divisor img { width: 100%; height: auto; }
+.thin-line-divisor {
+  width: 100%;
+  padding: 32px 0;
+  display: flex;
+  justify-content: center;
+}
+.thin-line-divisor img { max-width: 100%; height: auto; }
+
+/* --- SESSÃO DE CONTACTO (E-MAIL) --- */
+.email-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.email-section a {
+  text-decoration: none !important; /* Remove o sublinhado azul */
+  color: lightgray !important;     /* Força a cor cinza claro */
+  display: inline-block;           /* Permite que o link se comporte como bloco para centralizar */
+}
+
+.email-section a:hover {
+  filter: brightness(1.2);         /* Efeito opcional ao passar o rato */
+}
+
+.email-section p {
+  margin: 10px 0;
+}
+
+/* Ajuste específico para a imagem do Gmail se necessário */
+.email-section img {
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.email-section a {
+  color: lightgray !important;     /* Força a cor cinza claro */
+  text-decoration: none !important; /* Remove o sublinhado azul */
+  display: inline-block;           /* Garante uma área de clique sólida */
+  text-align: center;
+  margin-top: 10px;
+}
+
+.email-section a p {
+  color: lightgray !important;     /* Garante que o texto dentro do link também mude */
+  margin: 5px 0;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+
+  h1 {
+    /* Garante que em telas muito pequenas ele ainda tenha peso */
+    font-size: clamp(32px, 10vw, 42px) !important;
+    line-height: 1.1;
+    padding: 0 10px; /* Margem interna para o texto não colar na borda */
+  }
+
+  h2 {
+    font-size: clamp(24px, 7vw, 28px) !important;
+    line-height: 1.2;
+  }
+
+  .navbar a {
+    font-size: 14px !important;
+    padding: 8px 4px !important;
+    flex: 1 0 30%;
+  }
+
+  /* Força largura total APENAS no Mobile */
+  .player-wrapper, 
+  #arida-carousel-container, 
+  #games-sinergia, 
+  #blank-knight, 
+  #carrot {
+    width: 100vw !important;
+    position: relative;
+    left: 50% !important;
+    margin-left: -50vw !important;
+    max-width: none;
+  }
+
+  #platforms {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .platform img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .patterndiv .line-divisor {
+    width: 100vw !important;
+    max-width: none !important;
+    left: 50% !important;
+    margin-left: -50vw !important;
+  }
 }

@@ -26,12 +26,18 @@ const renderSeguro = (componente, id) => {
 
 const inicializarSite = () => {
   // 1. VÍDEOS (Estes geram os erros de postMessage, mas agora estão isolados)
-  renderSeguro(<ReactPlayer className='react-player' url='https://youtu.be/M7zJXKHKDDg'/>, 'akumi-wars');
-  renderSeguro(<ReactPlayer className='react-player' url='https://youtu.be/7jCUEVq-tjc'/>, 'hidden-in-light');
-  renderSeguro(<ReactPlayer className='react-player' url='https://youtu.be/_47nkjGdIoQ'/>, 'psi');
-  renderSeguro(<ReactPlayer className='react-player' url='https://www.youtube.com/watch?v=OrJVpwAh1VI'/>, 'deepnagogia');
-  renderSeguro(<ReactPlayer className='react-player' url='https://youtu.be/53DPw9dYZhc'/>, 'gomma');
-  renderSeguro(<ReactPlayer className='react-player' url='https://youtu.be/ltGq1BUhrq4' playing loop/>, 'hungerfordungeon');
+  renderSeguro(<ReactPlayer className='react-player' url='https://youtu.be/M7zJXKHKDDg'width='100%' 
+    height='100%'/>, 'akumi-wars');
+  renderSeguro(<ReactPlayer className='react-player' url='https://youtu.be/7jCUEVq-tjc'width='100%' 
+    height='100%'/>, 'hidden-in-light');
+  renderSeguro(<ReactPlayer className='react-player' url='https://youtu.be/_47nkjGdIoQ'width='100%' 
+    height='100%'/>, 'psi');
+  renderSeguro(<ReactPlayer className='react-player' url='https://www.youtube.com/watch?v=OrJVpwAh1VI'width='100%' 
+    height='100%'/>, 'deepnagogia');
+  renderSeguro(<ReactPlayer className='react-player' url='https://youtu.be/53DPw9dYZhc'width='100%' 
+    height='100%'/>, 'gomma');
+  renderSeguro(<ReactPlayer className='react-player' url='https://youtu.be/ltGq1BUhrq4' width='100%' 
+    height='100%'playing loop />, 'hungerfordungeon');
 
   renderSeguro(
   <Carousel 

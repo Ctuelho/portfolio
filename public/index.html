@@ -10,28 +10,37 @@
       <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
       <script>
          $(document).ready(function(){
-           $("a").on('click', function(event) {
-         
-             if (this.hash !== "") {
-               event.preventDefault();
-         
-               var hash = this.hash;
-         
-               $('html, body').animate({
-                 scrollTop: $(hash).offset().top
-               }, 800, function(){
-             
-                 window.location.hash = hash;
-               });
-             }  
-           });
-         });
+  // 1. Scroll Suave: Restrito estritamente a links que começam com #
+  $("a[href^='#']").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    }  
+  });
+
+  // 2. Disparo de E-mail: Usamos e.stopImmediatePropagation() 
+  // para garantir que nenhuma outra regra de navegação interfira.
+  $('#email-link').on('click', function(e) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    
+    // Abre o mailto em um contexto isolado
+    window.open($(this).attr('href'), '_self');
+  });
+});
       </script>
     </head>
     <body>
       <div class="main" id="root">
+         <div class="patterndiv">
          <div class="line-divisor" id="about-scroll">
             <img alt="" src="./img/linedivisor.png">
+         </div>
          </div>
          <div class="navbar">
             <a href="#about-scroll">About</a>
@@ -54,8 +63,10 @@
                </p>
             </div>
          </div>
+         <div class="patterndiv">
          <div class="line-divisor" id="skills-scroll">            
             <img alt="" src="./img/linedivisor.png">
+         </div>
          </div>
          <div id="skills" class="patterndiv">
             <h1>Technical Skills</h1>
@@ -72,8 +83,10 @@
                   <li>Integration of 3D/2D assets, VFX, and animations into gameplay systems</li>
                </ul>
             </div>
+            <div class="patterndiv">
             <div class="thin-line-divisor">
                <img alt="" src="./img/thinLineDivisor.png">
+            </div>
             </div>
             <div id="data-systems" class="patterndiv">
                <h2>Data-Driven Systems (Scriptable Objects)</h2>
@@ -96,8 +109,10 @@
                   <li>Balance-friendly systems designed for iteration and tuning</li>
                </ul>
             </div>
+            <div class="patterndiv">
             <div class="thin-line-divisor">
                <img alt="" src="./img/thinLineDivisor.png">
+            </div>
             </div>
             <div id="tool-workflow" class="patterndiv">
                <h2>Tools & Workflow</h2>
@@ -109,8 +124,10 @@
                </ul>
             </div>
          </div>
+         <div class="patterndiv">
          <div class="line-divisor" id="games-scroll">            
             <img alt="" src="./img/linedivisor.png">
+         </div>
          </div>
          <div class="patterndiv" id="games">
             <h1>Games</h1>
@@ -129,7 +146,9 @@
                   <li>Designed game systems like: skills, combat, equipment, craft, stats, etc.</li>
                </ul>
                <div class="play-link">
-                  <a href="https://store.steampowered.com/app/1961970/Akumi_Wars/" target="_blank">Play on Steam</a>
+                  <a href="https://store.steampowered.com/app/1961970/Akumi_Wars/" target="_blank">
+                     <img src="./img/steamlink.png" alt="Play on Steam">
+                  </a>
                </div>
             </div>
             <div class="thin-line-divisor">
@@ -149,7 +168,9 @@
                   <li>Generalist programmer: gameplay, graphics, UI/UX, AI, Steam, etc.</li>
                </ul>
                <div class="play-link">
-                  <a href="https://store.steampowered.com/app/907760/ARIDA_Backlands_Awakening/" target="_blank">Play on Steam</a>
+                  <a href="https://store.steampowered.com/app/907760/ARIDA_Backlands_Awakening/" target="_blank">
+                     <img src="./img/steamlink.png" alt="Play on Steam">
+                  </a>
                </div>
             </div>
          <div class="thin-line-divisor">
@@ -169,7 +190,9 @@
             </ul>
             <div class="play-link">
                <!-- <p><a href="https://globalgamejam.org/games/2026/hidden-light-3" target="_blank">Jam Page</a></p> -->
-               <p><a href="https://tutulio.itch.io/hidden-in-light" target="_blank">Play on Itch.io</a></p>
+               <a href="https://tutulio.itch.io/hidden-in-light" target="_blank">
+                  <img src="./img/itchlink.png" alt="Play on Itch.io">
+               </a>
             </div>
          </div>
          <div class="thin-line-divisor">
@@ -193,7 +216,9 @@
             </ul>
             <div class="play-link">
                <!-- <p><a href="https://itch.io/jam/game-off-2025/results/innovation" target="_blank">Jam Page</a></p> -->
-               <p><a href="https://tutulio.itch.io/psi" target="_blank">Play on Itch.io</a></p>
+               <a href="https://tutulio.itch.io/psi" target="_blank">
+                  <img src="./img/itchlink.png" alt="Play on Itch.io">
+               </a>
             </div>
          </div>
          <div class="thin-line-divisor">
@@ -218,7 +243,9 @@
             </ul>
             <div class="play-link">
                <!-- <p><a href="https://itch.io/jam/brackeys-10/results/innovation" target="_blank">Jam Page</a></p> -->
-               <p><a href="https://tutulio.itch.io/deepnagogia" target="_blank">Play on Itch.io</a></p>
+               <a href="https://tutulio.itch.io/deepnagogia" target="_blank">
+                  <img src="./img/itchlink.png" alt="Play on Itch.io">
+               </a>
             </div>
          </div>
          <div class="thin-line-divisor">
@@ -239,7 +266,9 @@
             </ul>
             <div class="play-link">
                <!-- <a href="https://ldjam.com/events/ludum-dare/50/$279980" target="_blank">Ludum Dare page -</a> -->
-               <a href="https://tutulio.itch.io/gomma" target="_blank">Play on Itch.io</a>
+               <a href="https://tutulio.itch.io/gomma" target="_blank">
+                  <img src="./img/itchlink.png" alt="Play on Itch.io">
+               </a>
             </div>
          </div>
          <div class="thin-line-divisor">
@@ -347,9 +376,7 @@
             <ul>
                <li>Centro Universitário Internacional UNINTER - 2025</li>
             </ul>
-            <div class="thin-line-divisor">
-               <img alt="" src="./img/thinLineDivisor.png">
-            </div>
+            
          </div>
       </div>
       <div class="line-divisor" id="experience-scroll">
@@ -424,20 +451,20 @@
       <div class="line-divisor" id="contact-scroll">
          <img alt="" src="./img/linedivisor.png">
       </div>
-      <div id="contact">
+      <div id="contact" class="patterndiv">
          <h1>Contact</h1>
          <div class="email-section">
             <p>If you wish to contact me, send me an e-mail:</p>
-            <a href="mailto:DUARTULIO@GMAIL.com?Subject=Hello%20again" target="_top">
-               <img alt="" src="./img/gmail.png" width="100" height="100">
-               <p>DUARTULIO@GMAIL.COM</p>
-            </a>
+            <a href="mailto:DUARTULIO@GMAIL.COM" id="email-link">
+      <img alt="Gmail" src="./img/gmail.png" width="100" height="100">
+      <p>DUARTULIO@GMAIL.COM</p>
+   </a>
             <p>Also, feel free to check and follow me in my other social media:</p>
          </div>
-         <div id="platforms">
+         <div id="platforms" class="patterndiv">
             <div class="platform" id="itch">
                <a href="https://tutulio.itch.io/" target="_blank">
-               <img alt="" src="./img/itch.png" width="100" height="100">
+               <img alt="" src="./img/itchwhite.png" width="100" height="100">
                </a>
             </div>
             <div class="platform" id="linkedin">
